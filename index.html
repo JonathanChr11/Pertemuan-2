@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPM Pertemuan 2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css
+    ">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+<style>
+    *{
+        font-family: 'Montserrat', sans-serif;
+    }
+    div {
+        width: 500px;
+        height: 500px;
+        background-color: red;
+    }
+    /* .display {
+        display:
+        block -> nambahnya kesamping, bukan ke bawah
+        flex -> bisa menambahkan mulai dari mana dan align kemana, bisa meletakkan posisi dengan mudah
+        inline -> tidak bisa mengganti ukuran
+        inline-block -> gabungan inline dan block
+    } */
+    .flex {
+        width: calc(700px - 400px);
+        height: 500px;
+        background-color: red;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column-reverse;
+    }
+        /*
+        flex-direction: column;dari yang posisi awal horizontal menjadi vertikal
+         flex-direction: column-reverse; posisinya dibalik
+        */
+        .transform {
+            transform: rotate(30deg);
+            color: red;
+            animation: muter 2s infinite;
+    }
+    .flex :hover{
+        background-color: sandybrown;
+    }
+
+    /*
+    :first-child -> div pertama didalam div class
+    :nth-child() -> div ke-n dalam div class
+    */
+    @keyframes muter {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(30deg);
+            background-color: salmon;
+        }
+    }
+    @keyframes muter {
+       0%{
+           transform: skew(30deg);
+       }
+    }
+</style>
+</head>
+<body>
+    <h1>Pertemuan 2 - TPM</h1>
+    <i class="fa fa-address-book" aria-hidden="true"></i>
+<div>
+    <span>Jonathan Christian</span>
+</div>
+
+<div class="transform">
+
+</div>
+
+<div class="flex">
+    <div>jonathan1</div>
+    <div>jonathan2</div>
+    <div>jonathan3</div>
+    <div>jonathan4</div>
+    <div>jonathan5</div>
+</div>
+</body>
+</html>
